@@ -1,23 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
 
+function TestOne() {
+  return(
+    <div style={{ width: "300px", height: "100px", background: "skyblue" }}>
+      1번째 컴포넌트 입니다.
+    </div>
+  )
+}
+
+function TestTwo() {
+  return(
+    <div style={{ width: "300px", height: "100px", background: "Khaki" }}>
+      2번째 컴포넌트 입니다.
+    </div>
+  )
+}
+
+function Select() {
+  return(
+    <div>
+      <input type="button" value="컴포넌트 변경" />
+      <TestOne />
+      <TestTwo />
+    </div>
+  )
+}
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Select />
     </div>
   );
 }
